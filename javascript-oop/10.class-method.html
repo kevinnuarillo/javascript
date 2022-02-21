@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>class method</title>
+</head>
+<body>
+
+
+<script>
+    
+    class Person {
+   
+        constructor(name) {
+            this.name = name;
+        }
+        
+        // class-method
+        sayHello(name) {
+            console.log(`Hello ${name}, my name is ${this.name}`); // direkokomendasikan begini agar menempel di prototype bukan di instance objectnya
+        }
+    }
+    
+    const kevin = new Person("Kevin")
+    console.log(kevin);
+    kevin.sayHello("Yeji");
+    
+    const ryujin = new Person("Ryujin")
+    console.log(ryujin);
+    ryujin.sayHello("Yeji");
+    
+    // test dan lihat di console, di prototype class person terdapat sayHello()
+    
+</script>
+
+
+</body>
+</html>

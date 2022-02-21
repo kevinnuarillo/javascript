@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>destructing</title>
+</head>
+<body>
+
+<script>
+    // Destructuring Array
+{
+    const names = ["Muhammad", "Kevin", "Nuarillo", "Shin", "Rujin"];
+    const [firstName, middleName, lastName, ...others]= names;
+    
+    console.log(firstName); // "Muhammad"
+    console.log(middleName); // "Kevin"
+    console.log(lastName); // "Nuarillo"
+    console.log(others); // "Shin", "Ryujin"
+}
+
+    // Destructuring Object
+{
+    const person = {
+        firstName: "Kevin",
+        middleName: "Nuarillo",
+        address: {
+            jalan: "Ssangmundong",
+            kota: "Seoul",
+            negara: "Korea Selatan"
+        },
+        hobby: "game",
+        channel: "Kevin Nuarillo"
+    }
+    
+    const {firstName, middleName, address: {jalan, kota, negara}, ...others} = person; // = person.firstName, person.middleName
+    
+    console.log(firstName);
+    console.log(middleName);
+    console.log(jalan);
+    console.log(kota);
+    console.log(negara);
+    console.log(others); // hobby: "game", channel: "Kevin Nuarillo"
+}
+
+// Destructuring object pada parameter function
+{
+    function displayName({firstName, middleName, lastName}) { // di destruct pada parameter berupa object
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+    }
+    
+    const person = {
+        firstName: "Muhammad",
+        middleName: "Kevin",
+        lastName: "Nuarillo"
+    }
+    
+    displayName(person);
+}
+
+// Destructuring array pada parameter function
+
+{
+    function sum([first, second]) {
+        return first + second;
+    }
+    
+    console.log(sum([1, 1])); // harus dengan kurung buka kurung tutup []
+}
+
+// destructuring default value Array
+{
+    const names = ["Muhammad", "Kevin"];
+    const [firstName, middleName, lastName = "Nuarillo"] = names;
+    
+    console.log(firstName);
+    console.log(middleName);
+    console.log(lastName); // defaultnya adalah "Nuarillo" sesuai di atas
+    
+}
+
+// destructuring default value object
+{
+    const person = {
+        firstName: "Shin",
+        middleName: "Ryu",
+        
+    }
+    
+    const { firstName, middleName, lastName = "Jin"} = person; // = person.firstName, person.middleName
+    
+    console.log(firstName);
+    console.log(middleName);
+    console.log(lastName);
+    
+}
+
+// destructuring default ganti nama variable
+{
+    const person = {
+        firstName: "Yoo",
+        middleName: "Jeong",
+    }
+
+    const { firstName: namaDepan, 
+            middleName: namaTengah, 
+            lastName: namaBelakang = "Yeon" 
+          } = person; // ganti nama isi nya
+
+    console.log(namaDepan);
+    console.log(namaTengah);
+    console.log(namaBelakang);
+
+}
+
+
+
+    
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>function return value</title>
+</head>
+<body>
+
+<script>
+    
+    // Buat function seperti biasa
+    function sayHello(first, last) {
+        const say = `Hello ${first} ${last}`
+        return say; // return apa yang akan di tangkap value, proses 'tangkap' ada di bawah
+    }
+    
+    const result = sayHello("Mirza", "Maya"); // masukan argumen, ini dinamakan menangkap value
+    document.writeln(`<p>${result}</p>`); // mencetak kepada browser
+    
+    
+    //- return pada if statement didalam function
+    function nilaiAkhir(value) {
+        // bisa untuk if statement, return akan mengembalikan value apa yang kita mau
+        if(value > 89) {
+            return "A" // nilai melebihi 89
+        } else if(value > 79) {
+            return "B" // nilai melebihi 79
+        } else if(value > 69) {
+            return "C" // nilai melebihi 69
+        } else if(value > 59) {
+            return "D" // nilai melebihi 59
+        } else {
+            return "F" // nilai dibawah 60
+        }
+    } 
+    
+    // tangkap value
+    const nilai = nilaiAkhir(75);
+    // cetak value
+    document.writeln(`<p>${nilai}</p>`);
+    
+    
+    //- Menghentikan perulangan dengan return
+    //function seperti biasa
+    function isContains(array, searchValue) {
+        // Perulangan untuk array
+        for(const element of array) {
+            // mencari array jika sama dengan searchValue
+            if(element === searchValue) {
+                return true; // output Jika array 'sama' dengan searchValue
+            }
+        }
+        return false; // output Jika array 'tidak sama' dengan searchValue
+    }
+    
+    // membuat array yang akan di cari menggunakan for of
+    const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+    // yang akan disamakan dengan array
+    const search = 11;
+    const found = isContains(array, search);
+    document.writeln(`<p>${found}</p>`);
+    
+    
+</script>
+
+
+
+</body>
+</html>

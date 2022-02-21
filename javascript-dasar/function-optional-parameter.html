@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Optional parameter</title>
+</head>
+<body>
+
+<script>
+    // semua function parameter di javascript adalah optional
+    function sayHello(firstName, middleName, lastName) {
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+    }
+    
+    sayHello() // tidak mengoutput apa-apa, namun tidak terjadi error
+    sayHello("Muhammad"); // ouput dari firstName, yang lainnya di abaikan, namun tidak ada error
+    sayHello("Muhmmad", "Kevin") // akan mengeluarkan firstName dan middleName saja, tidak terjadi error satupun
+    sayHello("Muhammad", "Kevin", "Nuarillo") // Akan mengeluarkan semua parameter
+    sayHello("Muhammad", "Kevin", "Nuarillo", "Jaime") // Semua akan berhasil namun argument terakhir tidak akan keluar, hanya ketiga pada parameter saja.
+    
+    // coba di test dan lihat di console
+    
+    
+    
+    
+</script>
+
+</body>
+</html>

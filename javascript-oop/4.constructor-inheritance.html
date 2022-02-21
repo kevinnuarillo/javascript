@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+
+<script>
+    
+    // buat constructor function seperti biasa
+    function Employee(firstName) {
+        this.firstName = firstName;
+        this.sayHello = function (name) {
+            console.log(`Hi ${name}, My name is ${this.firstName}`);
+        }
+    }
+    
+    function Manager(firstName, lastName) {
+        this.lastName = lastName;
+        Employee.call(this, firstName); // ini mewarisi seakan-akan mengcopy yang add di block Employee function
+    }
+    
+    const kevin = new Manager("Kevin", "Nuarillo");
+    kevin.sayHello("Ryujin");
+    console.log(kevin);
+    
+    
+    
+</script>
+
+
+
+</body>
+</html>

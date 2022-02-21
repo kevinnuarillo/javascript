@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Module Object</title>
+</head>
+<body>
+<script type="module">
+    
+    import * as model from "./scripts/8.module-object.js";
+    
+    console.log(model.firstName);
+    console.log(model.middleName);
+    console.log(model.lastName);
+    
+    model.hello();
+    
+    const person = new model.Person();
+    
+</script>
+</body>
+</html>

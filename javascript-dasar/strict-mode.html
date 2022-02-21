@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>strict mode</title>
+</head>
+<body>
+
+<script>
+    
+    // Strict mode merekomendasikan kode kode yang modern dan kode kode yang aman.
+    
+    function useStrictMode() {
+        'use strict' // tambah string use strict pada awal function, atau pada awal file kode *sangat di rekomendasikan
+        const person = {
+            firstName: "Kevin"
+        };
+        
+        // Error
+        with (person) {
+            console.log(firstName);
+        }
+    };
+    
+    useStrictMode();
+    
+    
+    
+</script>
+
+
+
+</body>
+</html>

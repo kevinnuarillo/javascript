@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>getter setter class</title>
+</head>
+<body>
+
+<script>
+    
+    class Person {
+        constructor(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+        
+        get fullName() {
+            return `${this.firstName} ${this.lastName}`;
+        }
+        
+        set fullName(value) {
+            const array = value.split(" ");
+            this.firstName = array[0];
+            this.lastName = array[1];
+        }
+    }
+    
+    const kevin = new Person("Kevin", "Nuarillo");
+    console.log(kevin);
+    console.log(kevin.fullName);
+    
+    kevin.fullName = "Shin Ryujin";
+    console.log(kevin)
+    
+    
+    
+    
+</script>
+
+</body>
+</html>

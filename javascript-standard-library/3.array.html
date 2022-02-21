@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>array</title>
+</head>
+<body>
+<script>
+        //-- Array Loop
+    {
+        //- forEach
+        const array = ["Shin", "Ryu", "Jin"];
+        
+        // loop dan cek array berdasarkan index
+        array.forEach((value, index) => console.log(`${index} : ${value}`));
+    }    
+    
+        //-- Array Queue *FIFO (First in First out)
+    {
+        // simpan array kosong yang nantinya akan dimasukan value array
+        const queue = []
+        
+        //- push
+        // masukan value dengan push
+        queue.push("Shin");
+        queue.push("Ryu");
+        queue.push("Jin");
+        
+        //- shift
+        console.log(queue) // Sudah menjadi array
+        console.log(queue.shift()); // Shin
+        console.log(queue.shift()); // Ryu
+        console.log(queue.shift()); // Jin
+        console.log(queue.shift()); // Undefined
+    }
+    
+        //-- Array Stack *LIFO (Last in First out)
+    {
+        const queue = []
+        
+        // masukan value dengan push
+        queue.push("Shin");
+        queue.push("Ryu");
+        queue.push("Jin");
+        
+        //- pop
+        // pop untuk menghapus data dan masukan dari belakang
+        console.log(queue.pop()); // Jin
+        console.log(queue.pop()); // Ryu
+        console.log(queue.pop()); // Shin
+        console.log(queue.pop()); // Undefined
+    }
+    
+        //-- Array Search
+    {
+        const source = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5,]
+        
+        //- find
+        console.log(source.find(value => value > 3)); // mencari value dengan cara apapun
+        //- findIndex
+        console.log(source.findIndex(value => value > 3)); // mencari index hasil value, dengan cara apapun
+        //- includes
+        console.log(source.includes(7)); // boolean apakah termasuk?
+        //- indexOf
+        console.log(source.indexOf(5)); // cari index ke berapa
+        //- lastIndexOf
+        console.log(source.lastIndexOf(5)); // index terakhir *jika sebuah value array ada 2
+    }
+    
+        //-- Array Filter
+    {
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const ganjil = numbers.filter(value => value % 2 === 1);
+        const genap = numbers.filter(value => value % 2 === 0);
+        
+        console.log(numbers);
+        console.log(ganjil);        
+        console.log(genap);
+    }
+    
+        //-- Array Transform
+    {
+        //- Map
+        const names = "Shin Ryu Jin".split(" ");
+        const namesUpper = names.map(value => value.toUpperCase());
+        
+        console.log(namesUpper);
+        
+        //- reduce
+        const reduceName = names.reduce((before, value) => before + ' ' + value);
+        console.log(reduceName); // menjadi string dari array
+        
+        //- reduceRight
+        const reduceRight = names.reduceRight((before, value) => before + ' ' + value);
+        console.log(reduceRight); // di urut dari kanan ke kiri
+        
+        //- reduce number
+        const numbers = [1,2,3,4,5,6,7,8,9,10];
+        const result = numbers.reduce((total, value) => total + value); // akan menjumlah semua numbers yang ada pada array
+        console.log(result);
+    }
+    
+</script>
+</body>
+</html>

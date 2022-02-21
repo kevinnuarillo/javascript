@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Error</title>
+</head>
+
+<body>
+<script>
+
+    class MathUtil {
+        static sum(...numbers) {
+            
+            if(numbers.length === 0) {
+                // biasa kan pake throw error jika ingin membuat error, jangan pake alert.
+                throw new Error("Total parameter harus lebih dari 0"); // jika parameter tidak lebih dari 0 maka kode akan berhenti disini.
+            }
+            
+            let total = 0;
+            for (const number of numbers) {
+                total += number;
+            }
+            
+            return total;
+            
+        }
+    }
+
+        // cek di console
+        console.log(MathUtil.sum());
+
+        const result = MathUtil.sum(1, 2, 3, 4, 5);
+        console.log(result);
+        
+        
+    </script>
+</body>
+
+</html>

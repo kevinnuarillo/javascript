@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Export Default</title>
+</head>
+<body>
+<script type="module">
+    
+    // function default
+    import sayHelloDefault from "./scripts/7.export-default-function.js"
+    
+    // variable default
+    import nameDefault from "./scripts/7.1.export-default-variable.js"
+    
+    // class default
+    import Person from "./scripts/7.2.export-default-class.js"
+    
+    sayHelloDefault("Kevin")
+    console.log(nameDefault);
+    
+    const person = new Person("Yuna");
+    person.sayHi();
+    
+</script>
+</body>
+</html>

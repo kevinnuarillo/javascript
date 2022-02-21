@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Object</title>
+</head>
+<body>
+    
+<script>
+    
+// constructor function
+function Person() { // nama/class function harus diawali uppercase, begitupun kata2 selanjutnya 
+
+// ini adalah cetakan untuk property pada object dibawah
+    this.firstName = "";
+    this.lastName = "";
+}
+
+// membuat objectnya tidak memakai kurung kurawal lagi, dan menggunakan 'new'
+const kevin = new Person();
+kevin.firstName = "Kevin";
+kevin.lastName = "Nuarillo";
+
+const ryujin = new Person();
+ryujin.firstName = "Shin";
+ryujin.lastName = "Ryujin";
+
+console.log(kevin);
+console.log(ryujin);
+    
+    
+    
+</script>
+
+</body>
+</html>

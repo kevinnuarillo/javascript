@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scope</title>
+</head>
+<body>
+
+<script>
+    
+    // global scope
+    let counter = 0;
+    
+    // global scope
+    function hitMe() {
+        // local scope hitMe
+        counter++;
+    }
+    
+    // global scope
+    function other() {
+        // local scope other
+    }
+    
+    hitMe() // function ini menambahkan angka pada counter++
+    console.log(counter) // maka menjadi 1
+
+    
+    //- Local scope ERROR
+    function first() {
+        // local scope first
+        let firstVariable = "First";
+        
+        function firstNested() {
+            console.log(firstVariable); // ini bisa karena masih di dalam local scope first
+        }
+    }
+    
+    function second() {
+        // local scope second
+        let secondVariable = "Second";
+    }
+    
+    first();
+    second()
+    
+    
+    // console.log(firstVariable); // error
+    // console.log(secondVariable); // error
+    
+    
+    
+    
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Target</title>
+</head>
+<body>
+<input id="clickMe" type="button" value="Click Me!">
+<script>
+    
+    const button = document.getElementById("clickMe");
+    button.addEventListener("click", function() {
+        button.setAttribute("value", "Terjadi pengklikan!");
+    });
+    
+    // bisa beberapa event listener
+    button.addEventListener("click", function() {
+        console.log("Tombol di click");
+    });
+    
+</script>
+</body>
+</html>

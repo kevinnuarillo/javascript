@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RegExp</title>
+</head>
+<body>
+<script>
+    
+        // create RegExp
+    {
+        const regex1 = /abc/;
+        const regex2 = new RegExp("abc");
+        const regex3 = new RegExp(/abc/);
+
+    }
+    
+        // exec and test
+    {
+        const string = "ryujin nuarillo";
+        const regex = /ryujin/
+        
+        const result = regex.exec(string);
+        console.log(result);
+        
+        const test = regex.test(string);
+        console.log(test);
+    }
+    
+        // RegExp Modifier
+    {
+        const name = "kim jisoo\nKim Jennie\nJisoo Nuarillo";
+        const regex1 = /kim/g;
+        const regex2 = /jisoo/ig;
+        
+        let result;
+        while ((result = regex1.exec(name)) !== null) {
+            console.log(result);
+        }
+        
+        while ((result = regex2.exec(name)) !== null) {
+            console.log(result);
+        }
+        
+        
+    }
+    
+        // advance regex
+    {
+        const regex = /ki[aiueo]/ig
+        
+        const name = "kiu kie kom kia kio kui";
+        let result;
+        while ((result = regex.exec(name)) !== null) {
+            console.log(result);
+        }
+        
+    }
+    
+        // Method
+    {
+        const name = "kiu kie kom kia kio kui";
+        
+        console.log(name.search(/ki[aiueo]/ig));
+        console.log(name.match(/ki[aiueo]/ig));
+        console.log(name.replace(/ki[aiueo]/i, "ryu"));
+        console.log(name.replaceAll(/ki[aiueo]/ig, "ryu"));
+        console.log(name.split(/k/ig));
+    }
+    
+</script>
+</body>
+</html>

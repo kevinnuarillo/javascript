@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>object method</title>
+</head>
+<body>
+
+<script>
+    
+    const person = { // Ini object person
+        name: "kevin", // property dan valuenya
+        sayHello: function (name) { // anonymous function bisa di masukan ke obkect
+            alert(`Hellow ${name}`); // isi function
+        }
+    }
+    
+    person.sayHello("Kevin") // panggil function lewat object terlebih dahulu, lalu ambil property si function, beri nama.
+    
+    // object sudah dibuat terlebih dahulu, ingin menambahkan lewat function
+    const orang = {
+        name: "Ryujin",
+    }
+    
+    orang.sayHello = function (name) {
+        alert(`Hi ${name}`)
+    }
+    
+    orang.sayHello("Yuna");
+    
+</script>
+
+
+
+</body>
+</html>

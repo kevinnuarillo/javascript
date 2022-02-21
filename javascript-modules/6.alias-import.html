@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+<script type="module"> 
+    // 6
+    import {company as perusahaan, sum as total, Company as Perusahaan} from "./scripts/6.alias-import.js";
+    // 6.1
+    import {company, sum , Company} from "./scripts/6.1.alias-import2.js";
+    
+    // 6
+    console.log(perusahaan);
+    console.log(total(5, 5));
+    
+    const comp = new Perusahaan();
+    
+    // 6.1
+    console.log(company);
+    console.log(sum(10, 10));
+    
+    const compa = new Company();
+</script>
+</body>
+</html>

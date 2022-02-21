@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>anonymous-function</title>
+</head>
+<body>
+
+<script>
+    
+    const say = function (name) { // function tidak diberi nama, const say adalah variabel, bukan nama function
+        document.writeln(`<p>Hello ${name}</p>`)
+    }
+    
+    say("Kevin") // variabel memasukan argument
+    
+    // bisa di panggil kembali seperti ini
+    // namun tidak bisa di reuse
+    
+    function giveMeName(callback) {
+        callback("Kevin")
+    }
+    
+    giveMeName( function(name) {
+        document.writeln(`<p>Hi ${name}</p>`)
+    })
+    
+    // harus panggil kembali
+    giveMeName(function(name) {
+        document.writeln(`<p>Hola ${name}</p>`)
+    })
+    
+    
+    
+</script>
+
+</body>
+</html>

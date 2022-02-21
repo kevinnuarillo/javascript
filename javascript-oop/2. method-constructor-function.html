@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Object</title>
+</head>
+<body>
+    
+<script>
+    
+function Person() { 
+    this.firstName = "";
+    this.lastName = "";
+    // method constructor
+    this.sayHello = function (name) {
+        console.log(`Hi ${name}, my name is ${this.firstName}`);
+    }
+};
+
+const kevin = new Person();
+kevin.firstName = "Kevin";
+kevin.lastName = "Nuarillo";
+// Panggil method
+kevin.sayHello("Yuna");
+
+
+const ryujin = new Person();
+ryujin.firstName = "Shin";
+ryujin.lastName = "Ryujin";
+// Pnggil method
+ryujin.sayHello("Yeji");
+
+console.log(kevin);
+console.log(ryujin);
+    
+    
+    
+</script>
+
+</body>
+</html>

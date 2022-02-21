@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Selector Attribute Operator</title>
+</head>
+<body>
+<div class="kim">Kim</div>
+<div class="kimjennie">Kim Jennie</div>
+<div class="kimjisoo">Kim Jisoo</div>
+
+<script>
+    
+    // ambil semua yang ada kim
+    const list = document.querySelectorAll("div[class^=kim]");
+    
+    // ambil yang hanya kim dan tidak mengikuti karakter berikutnya
+    const list2 = document.querySelectorAll("div[class=kim]");
+    console.log(list);
+    
+</script>
+
+</body>
+</html>

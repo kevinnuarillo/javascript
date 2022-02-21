@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Object</title>
+</head>
+<body>
+<script>
+    
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.sayHello = function (name) {
+        console.log(`Hi ${name}, my name is ${this.firstName}`);
+    }
+};
+
+// Menambah ke prototype, tetapi tidak ke object instancenya.
+// cek __proto__ di console
+Person.prototype.sayBye = function() {
+    console.log(`${this.firstName} Say goodbye.`)
+}
+
+Person.prototype.run = function() {
+    console.log(`${this.firstName} is running.`)
+}
+
+const kevin = new Person("Kevin", "Nuarillo");
+const ryujin = new Person("Sung", "Bora");
+
+console.log(kevin);
+console.log(ryujin);
+
+kevin.run();
+kevin.sayBye();
+    
+</script>
+</body>
+</html>

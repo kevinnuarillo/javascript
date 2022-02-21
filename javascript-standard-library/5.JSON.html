@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Object Notation</title>
+</head>
+<body>
+<script>
+    
+    const person = {
+        firstName: "Shin",
+        middleName: "Ryu",
+        lastName: "Jin",
+        address: {
+            country: "South Korea",
+            City: "Chuncheon",
+        },
+        hobbies: ["Dancing", "Singing", "Game"]
+    };
+    
+    // Object ke string
+    const json = JSON.stringify(person);
+    
+    // String ke object
+    const personString = JSON.parse(json);
+    
+    console.log(json);
+    console.log(personString);
+    
+</script>
+</body>
+</html>

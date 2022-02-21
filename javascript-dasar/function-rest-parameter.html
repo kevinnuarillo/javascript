@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+
+<script>
+    function sum(name, ...data) { // tambahkan 3 titik untuk menjadikan array
+         let total = 0; // variable yang nantinya akan dimasukan nilainya
+         for(const item of data) { // loop item pada data yang sudah menjadi array, *Valuenya di argument ya
+             total += item; // total yang tadinya 0 sekarang akan dimasukan item
+         }
+         document.writeln(`<p>Total ${name} is ${total}</p>`);
+    }
+    
+    sum("GTX1660", 20, 30, 80, 70, 40); // akan dijumlahkan
+    
+    // tes untuk mencoba
+    
+    //- Spread Syntax
+    const values = [20, 20, 20, 20, 20];
+    sum("RTX3080", values) // ini tidak bisa karena ...data menjadi array bukan berarti dia bisa menggunakan array
+    sum("RTX3070", ...values) // dengan menggunakan spread "...", maka baru array tersebut akan terbaca menjadi, array -> spread = ...data
+    
+    // Arguments object *tidak disarankan
+    function oldSum() { // tidak bisa menentukan parameter
+        let total = 0;
+        for(const item of arguments) { // arguments sudah masuk menjadi parameter
+            total += item;
+        }
+        document.writeln(`<p>Total is ${total}</p>`)
+    }
+    
+    oldSum(2, 2, 2, 2, 2);
+    
+    
+</script>
+
+
+
+</body>
+</html>

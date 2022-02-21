@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML form</title>
+</head>
+<body>
+
+    <form name="commentForm">
+        <label for="comment">
+            Comment : <input id="comment" type="text" name="comment">
+        </label>
+        <br>
+        <label for="from">
+            From : <input id="from" type="text" name="from">
+        </label>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <div id="commentList">
+        
+    </div>
+
+<script>
+
+    document.querySelector("form[name=commentForm]").onsubmit = function(event) {
+        
+        // agar value tetap pada app
+        event.preventDefault();
+        
+        // ambil id
+        const commentList = document.getElementById("commentList");
+        const comment = document.getElementById("comment").value;
+        const from = document.getElementById("from").value; // gunakan value agar mengeluarkan apa yang akan di submit
+    
+        // ketika submit akan keluar paragraf
+        const commentItem = document.createElement("p");
+        commentItem.textContent = `${comment} - ${from}`;
+        commentList.appendChild(commentItem);
+        
+        // reset form
+        document.querySelector("form[name=commentForm]").reset()
+    }
+    
+</script>
+</body>
+</html>

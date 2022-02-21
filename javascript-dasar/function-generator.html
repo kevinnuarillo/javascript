@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>function generator</title>
+</head>
+<body>
+
+<script>
+    function* createNames(){ // tambahkan * untuk function generator
+        yield "Muhammad";
+        yield "Kevin";
+        yield "Nuarillo"; // ini akan jadi iterasi
+    }
+    
+    const names = createNames();
+    for(const name of names) {
+        console.log(name); // memunculkan nama2 di atas
+    }
+    
+    // lazy, eksekusi generator, setelah itu angkayang ada di paling bawah
+    function* buatGanjil(value) {
+        for(let i = 1; i<= value; i++) {
+            if(i % 2 === 1) {
+                console.log(`Yield ${i}`); // ini lazy, akan mengoutput Yield 1, setelah itu 1, dan seterusnya
+                yield i;
+            }
+        }
+    }
+    
+    // eager, seluruh isi dalam function ini di eksekusi duluan, setelah itu hasil yang ada di paling bawah
+    function buatGanjilArray(value) {
+        const result = []
+        for(let i = 1; i<= value; i++) {
+            if(i % 2 === 1) {
+                console.log(`Yield ${i}`);
+                result.push(i) // setelah di loop, i akan di taruh di result array kosong
+            }
+        }
+        return result
+    }
+    
+    const numbers = buatGanjil(100);
+    // for(const number of numbers) {
+    //     console.log(number); // angka satu didapatkan dari sini
+    // }
+    
+    console.log(numbers.next().value); // generator punya yang namanya next() untuk mengesekusi satu persatu, saking lazynya
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alias Export</title>
+</head>
+<body>
+<script type="module"> 
+    
+    // tidak direkomendasikan memasukan alias di export karena akan menyebabkan konflik jika file juga punya alias yang sama.
+    import {perusahaan, total, Perusahaan} from "./scripts/5.alias-export.js"
+    
+    console.log(perusahaan);
+    console.log(total(5, 5));
+    
+    const comp = new Perusahaan();
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Node</title>
+</head>
+<body>
+    
+    <ul id="menu">
+        <li id="first">First</li>
+        <li id="second">Second</li>
+        <li id="third">Third</li>
+    </ul>
+
+<script>
+  
+    const menu = document.getElementById("menu");
+    console.log(menu);
+    console.log(menu.childNodes);
+    
+
+    const second = document.getElementById("second");
+    console.log(second);
+    console.log(second.previousSibling); // text, karena ada enter setelah li
+    console.log(second.nextSibling.nextSibling); // dapat next sibling karena setelah enter ada li
+ 
+</script>
+</body>
+</html>

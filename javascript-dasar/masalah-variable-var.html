@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>masalah variable var</title>
+</head>
+<body>
+
+<script>
+    
+    let
+    let i = 20;
+    for(let i = 1; i <= 10; i++) {
+        // local scope
+        console.log(`Local ${i}`); // local 1 - 10
+    }
+    
+    console.log(`Global ${i}`); // Global 20
+    
+    var i = 20;
+    for(var i = 1; i <= 10; i++) {
+        // local scope
+        console.log(`Local ${i}`); // local 1 - 10
+    }
+    
+    console.log(`Global ${i}`); // Global 11
+    
+    // maka dari itu var sudah tidak direkomendasikan. karena mengubah global scope nya.
+    
+    
+</script>
+
+
+
+</body>
+</html>

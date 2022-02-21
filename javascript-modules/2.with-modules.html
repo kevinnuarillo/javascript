@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>with modules</title>
+    <script type="module" src="scripts/say.js"></script>
+</head>
+<body>
+<script type="module">
+    
+    import {sayHello, sayGoodBye} from'./scripts/say.js'
+    
+    sayHello("Kevin");
+    sayGoodBye("Kevin");
+    
+</script>
+</body>
+</html>

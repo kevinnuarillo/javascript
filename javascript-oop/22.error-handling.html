@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Error Handling</title>
+</head>
+
+<body>
+<script>
+
+    // kasus 1
+    class MathUtil {
+        static sum(...numbers) {
+            
+            if(numbers.length === 0) {
+                throw new Error("Total parameter harus lebih dari 0"); 
+            }
+            
+            let total = 0;
+            for (const number of numbers) {
+                total += number;
+            }
+            
+            return total;
+            
+        }
+    }
+
+   try {
+       // coba test dengan tidak memasukan/memasukan parameter lebih dari 0.
+       // jika error, bagian try akan di skip dan dilanjut di bagian catch
+        console.log(MathUtil.sum(1, 1)); // jika parameter lebih dari 0 kode selanjutnya di try kan di eksekusi juga
+        console.log("Coba, error ga");
+   } catch (error) {
+       console.log(`Terjadi error : ${error.message}`);
+   } finally {
+       console.log("Finnaly selalu dieksekusi, ada atau tidak ada error")
+   }
+   
+   // kasus 2
+   class Counter {
+       #counter = 1;
+       
+       next() {
+           // permasalahan ada pada return duluan di kode
+            try {
+                // #1 ini seharusnya tidak menghasilkan apa apa, akan tetap #counter
+                // #2 dengan try finally, kode ini akan di eksekusi dan lanjut kebawah
+                return this.#counter;  
+           } finally {
+               // #1 ini seharusnya menambah #counter, namun #counter sudah di return terlbih dahulu di atas.
+               // #2 dengan try finally, kode ini akan di eksekusi juga
+                this.#counter++;   
+           }
+       }
+   }
+   
+   // test pada conole, di coba-coba saja
+   const counter = new Counter();
+   console.log(counter.next());
+   console.log(counter.next());
+   console.log(counter.next());
+   console.log(counter.next());
+   console.log(counter.next());
+   console.log(counter.next());
+        
+</script>
+</body>
+
+</html>

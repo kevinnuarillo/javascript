@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Selector universal</title>
+</head>
+<body>
+
+<ul>
+    <li>Satu</li>
+    <li>Dua</li>
+    <li>Tiga</li>
+</ul>
+
+<ul>
+    <li id="empat">Empat</li>
+    <li id="lima">Lima</li>
+</ul>
+
+<p>Aku juga kena</p>
+
+<input type="button" value="Sama aku juga kena universal">
+
+<script>
+    
+    const list = document.querySelectorAll("*");
+    console.log(list);
+    
+</script>
+</body>
+</html>

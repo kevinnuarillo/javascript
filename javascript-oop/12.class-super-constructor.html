@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>class inheritance</title>
+</head>
+<body>
+
+<script>
+    
+    class Employee {
+        // ini constructor parent
+        constructor(firstName) {
+            this.firstName = firstName;
+        }
+        
+        sayHello(name) {
+            console.log(`Hello ${name}, my name is employee ${this.firstName}`);
+        }
+    };
+    
+    class Manager extends Employee { // karena Manager adalah child dari Employee 'extends'
+        // constructor child harus memanggil menggunakan super agar dapat datanya di parent
+        constructor(firstName, lastName) {
+            super(firstName); // jika tidak memakai super maka akan terjadi error, kenapa? lihat line 24
+            this.lastName = lastName;
+        }
+        
+        sayHello(name) {
+            console.log(`Hello ${name}, my name is manager ${this.firstName} ${this.lastName}`);
+        }
+    };
+    
+    const kevin = new Employee("Kevin");
+    kevin.sayHello("Yeji");
+    
+    const ryujin = new Manager("Shin", "Ryujin");
+    ryujin.sayHello("Yeji");
+    
+    // test dan lihat hasilnya di console
+    console.log(kevin);
+    console.log(ryujin);
+    
+</script>
+
+</body>
+</html>

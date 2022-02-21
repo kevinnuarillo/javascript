@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>operator instanceof</title>
+</head>
+<body>
+<script>
+    
+    class Employee {
+        
+    }
+    
+    class Manager extends Employee {
+        
+    }
+    
+    const kevin = new Employee();
+    const ryujin = new Manager();
+    
+    console.log(kevin instanceof Employee); // true
+    console.log(ryujin instanceof Manager); // true
+    console.log(ryujin instanceof Employee); // false
+    console.log(kevin instanceof Manager); // false
+    
+    
+    
+</script>
+</body>
+</html>

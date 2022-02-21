@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Target</title>
+</head>
+<body>
+<input id="clickMe" type="button" value="Click Me!">
+<script>
+    
+    const button = document.getElementById("clickMe");
+    // onclick adalah global, jadi tidak bisa menjadi 2
+    button.onclick = function () {
+        button.setAttribute("value", "Button ini di click!")
+        console.log("Telah di click!")
+    }
+    
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Function recursive</title>
+</head>
+<body>
+
+<script>
+    
+    // bikin factorial loop tanpa rekursif
+    function factorial(value) {
+        let result = 1; // 1 karna akan dikali
+        for(let i = 1; i <= value; i++) { // menghitung perulangan pada value
+            result *= i; // dikalikan dengan value pada perulangan i
+        }
+        return result;
+    }
+    
+    console.log(factorial(7))
+    
+    // factorial rekursif
+    function factorialRecursive(value) {
+        if(value === 1) {
+            return 1;
+        } else {
+        return    value * factorialRecursive(value - 1);
+        }
+    }
+    
+    console.log(factorialRecursive(5))
+    // jadi
+    factorialRecursive(5);
+    // 5 * factorialRecursive(4);
+    // 5 * 4 * factorialRecursive(3) // karena value - 1, jadi 4 - 1
+    // 5 * 4 * 3 * factorialRecursive(2)
+    // 5 * 4 * 3 * 2 * facorialRecusive(1)
+    // 5 * 4 * 3 * 2 * 1
+    
+    
+    
+</script>
+
+
+</body>
+</html>

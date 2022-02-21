@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>object</title>
+</head>
+<body>
+<script>
+        // object.freeze
+    {
+        const person = {
+            firstName: "Kevin",
+            lastName: "Nuarillo"
+        };
+        
+        // object tidak bisa di ganggu gugat
+        Object.freeze(person);
+        
+        // kita tes
+        person.firstName = "Shin"; // tidak bisa
+        delete person.lastName; // tidak bisa
+        
+        console.log(person);
+    }
+    
+        // object.seal
+    {
+        const person = {
+            firstName: "Kevin",
+            lastName: "Nuarillo"
+        };
+        
+        // object hanya bisa di edit/ diganti
+        Object.seal(person);
+        
+        // kita tes
+        person.firstName = "Shin"; // bisa di edit/di ganti
+        delete person.lastName; // tidak bisa menghapus
+        person.middleName = "Ryu" // tidak bisa menambahkan
+        
+        console.log(person);
+    }
+    
+        // Object Assign
+    {
+        const target = {firstName: "Shin"};
+        const source = {lastName: "Ryujin"};
+        
+        // mengcopy source ke target
+        Object.assign(target, source); // hati hati bila nama property ada yang sama, maka akan menimpa property tersebut setelah di copy.
+        console.log(target);
+    }
+    
+        // Object name & property
+    {
+        const person = {
+            firstName: "Kevin",
+            lastName: "Nuarillo"
+        };
+        
+        // Mengambil isi value dari object property
+        console.log(Object.values(person)); // ["Kevin", "Nuarillo"]
+        
+        // Mengambil property dari object
+        console.log(Object.getOwnPropertyNames(person)); // ["firstName", "lastName"]
+    }
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Node</title>
+</head>
+<body>
+    
+    <ul id="menu">
+        <li id="first">First</li>
+        <li id="second">Second</li>
+        <li id="third">Third</li>
+    </ul>
+
+<script>
+    // mengambil parent node
+    const menu = document.getElementById("menu");
+    console.log(menu);
+    
+    // mengambil child node
+    const first = document.getElementById("first");
+    console.log(first);
+    
+    // note: Node ada 3 jenis, parent(ke atas), child(kebawah), sibling(ke samping).
+    
+    // contoh parent = ul
+    // contoh child = li
+    // contoh sibling = first, second, dan third.
+</script>
+</body>
+</html>

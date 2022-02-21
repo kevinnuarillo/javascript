@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Big Integer</title>
+</head>
+<body>
+<script>
+    
+    // Jika ingin menggunakan angka lebih dari MAX_SAFE_INTEGER, maka gunakan BigInt
+    
+    const a = BigInt(Number.MAX_SAFE_INTEGER);
+    const b = BigInt(Number.MAX_SAFE_INTEGER);
+    const c = a + b;
+    
+    console.log(c);
+    console.log(typeof c);
+    
+</script>
+</body>
+</html>

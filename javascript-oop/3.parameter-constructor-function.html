@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Object</title>
+</head>
+<body>
+    
+<script>
+    
+function Person(firstName, lastName) { // tambah parameter
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.sayHello = function (name) {
+        console.log(`Hi ${name}, my name is ${this.firstName}`);
+    }
+};
+
+const kevin = new Person("Kevin", "Nuarillo"); // langsung masukan pada constructor Person()
+kevin.sayHello("Yuna");
+
+
+const ryujin = new Person("Sung", "Bora");
+ryujin.sayHello("Yeji");
+
+console.log(kevin);
+console.log(ryujin);
+    
+    
+    
+</script>
+
+</body>
+</html>

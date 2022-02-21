@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>number</title>
+</head>
+<body>
+<script>
+    
+    const input = "12345";
+    // conversi string ke number
+    const number = Number(input);
+    
+    console.log(typeof input);
+    console.log(typeof number);
+    
+    console.log(number);
+    
+    // Cek Static Property
+    console.log(Number.MAX_VALUE);
+    console.log(Number.MIN_VALUE);
+    // direkomendasikan karena safe
+    console.log(Number.MAX_SAFE_INTEGER);
+    console.log(Number.MIN_SAFE_INTEGER);
+    
+    // Static Methods
+    
+    const data = Number("12345"); // walaupun string jika di cek dengan isInteger akan tetap true
+    // cek static methods
+    console.log(Number.isInteger(data));
+    console.log(Number.isNaN(data));
+    
+    // static instance methods
+    
+    const value = Number("12345");
+    console.log(value.toString(2)); // ke binary
+    // bahasa number dari berbagai negara
+    console.log(value.toLocaleString("id-ID")); // indonesia 12.345
+    console.log(value.toLocaleString("en-US")); // Amerika 12,345
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Attr</title>
+</head>
+<body>
+    <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Nintendo_switch_logo.png">
+<script>
+
+    const logo = document.getElementById("logo");
+    const attributes = logo.attributes;
+    
+for (let attribute of attributes) {
+    console.log(`${attribute.name} : ${attribute.value}`);
+}
+    
+</script>
+</body>
+</html>

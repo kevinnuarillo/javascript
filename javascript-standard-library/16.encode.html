@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+<script>
+    
+        // encode ui dan decode uri
+    {
+        const url = "http://coba.com/?name=Shin Ryu Jin"
+        console.log(url);
+        
+        const encoded = encodeURI(url);
+        console.log(encoded);
+        
+        const decoded = decodeURI(encoded);
+        console.log(decoded);
+    }
+    
+        // encode ui dan decode uri *pisah
+    {
+        // lebih mudah jika pisah value dan url nya
+        const value = "Shin&Ryu=Jin"
+        const url = "http://coba.com/?name="
+        console.log(url + value);
+        
+        const encoded = encodeURIComponent(value);
+        console.log(url + encoded);
+        
+        const decoded = decodeURIComponent(encoded);
+        console.log(url + decoded);
+    }
+    
+</script>
+</body>
+</html>

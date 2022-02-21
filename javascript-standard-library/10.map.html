@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Map</title>
+</head>
+<body>
+<script>
+    
+    const map = new Map();
+    map.set("nama", "Shin Ryujin");
+    map.set("alamat", "Chuncheon-si");
+    
+    console.log(map); // objectnya
+    console.log(map.get("nama")); // Shin Ryujin
+    console.log(map.get("alamat")); // Chuncheon-si
+    console.log(map.get("hobi")); // Undefined
+    
+    // Print out si map nya
+    for (const element of map) { // element akan menjadi array
+        console.log(`${element[0]}: ${element[1]} `);
+    }
+    
+    // lebih rapih untuk printout mapnya
+    map.forEach((value, key) => console.log(`${key}: ${value}`));
+    
+</script>
+</body>
+</html>

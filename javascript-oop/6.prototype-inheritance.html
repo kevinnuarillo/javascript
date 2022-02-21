@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>prototype inheritance</title>
+</head>
+<body>
+
+<script>
+    
+    function Employee(name) {
+        this.name = name;
+    }
+    
+    function Manager(name) {
+        this.name = name;
+    }
+    
+    // proto pada manager akan mewarisi ke proto employee
+    Manager.prototype = Object.create(Employee.prototype); // pembuatan prototype yang benar
+    
+    Manager.prototype.sayHello = function (name) {
+        console.log(`${name}, my name is Manager ${this.name}`);
+    }
+    
+    Employee.prototype.sayHello = function (name) {
+        console.log(`${name}, my name is Employee ${this.name}`);
+    }
+    
+    const employee = new Employee("Kevin");
+    employee.sayHello("Ryujin");
+
+    const manager = new Manager("Nuarillo");
+    manager.sayHello("Yuna");
+    
+    
+</script>
+
+</body>
+</html>

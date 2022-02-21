@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>arrow function object method</title>
+</head>
+<body>
+
+<script>
+    
+    const person = {
+        name: "Kevin",
+        sayHello: (name) => {
+            console.log(`Hello ${name}, my name is ${this.name}`) // ini tidak akan berjalan, jika ingin memakai this diharuskan mencantumkan function, tidak dengan arrow function
+        }
+    }
+    
+    person.sayHello("Ryujin")
+    
+</script>
+
+
+
+</body>
+</html>

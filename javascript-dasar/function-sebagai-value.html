@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Function sebagai value</title>
+</head>
+<body>
+
+<script>
+        
+    function sayHello(name) {
+        document.writeln(`<p>Hello ${name}</p>`);
+    }
+    
+    const say = sayHello; // function menjadi value 
+    
+    sayHello("Mirza"); // default
+    say("Kevin"); // bisa dipanggil ketika sudah menjadi value
+    
+    function giveMeName(callback) {
+        callback("kevin"); // sayHello("kevin")
+    }
+    
+    giveMeName(sayHello);
+    giveMeName(say);
+
+
+</script>
+
+</body>
+</html>

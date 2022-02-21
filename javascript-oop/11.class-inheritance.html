@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>class inheritance</title>
+</head>
+<body>
+
+<script>
+    
+    class Employee {
+        sayHello(name) {
+            console.log(`Hello ${name}, my name is employee ${this.name}`);
+        }
+    };
+    
+    // inheritance pada Employee menggunakan extends,
+    class Manager extends Employee {
+        sayHello(name) {
+            console.log(`Hello ${name}, my name is manager ${this.name}`);
+        }
+    };
+    
+    const kevin = new Employee();
+    kevin.name = "Kevin";
+    kevin.sayHello("Yeji");
+    
+    const ryujin = new Manager();
+    ryujin.name = "Ryujin";
+    ryujin.sayHello("Yeji");
+    
+    
+    // cek di console apakah sudah masuk prototype object dan si manager sudah inheritance ke class Employee
+    console.log(kevin);
+    console.log(ryujin);
+    
+    
+    
+    
+</script>
+
+</body>
+</html>

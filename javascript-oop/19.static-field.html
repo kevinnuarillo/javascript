@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>static field</title>
+</head>
+<body>
+<script>
+
+    class Configuration {
+        static app = "Spend App"
+        static version = 1.0
+        static author = "Kevin Nuarillo"
+    }
+    
+    const config = new Configuration()
+    console.log(config)
+    
+    Configuration.version = 2.0;
+    
+    console.log(Configuration.app);
+    console.log(Configuration.version);
+    console.log(Configuration.author);
+
+</script>
+</body>
+</html>

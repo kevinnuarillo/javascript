@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Super method</title>
+</head>
+<body>
+
+<script>
+    
+    class Shape {
+        paint() {
+            console.log("Paint Shape");
+        }
+    }
+    
+    class Circle extends Shape {
+        paint() {
+            // Gunakan super untuk mengambil data di parent, jika tidak maka akan tertimpa oleh data di child.
+            super.paint()
+            console.log("Paint Circle");
+        }
+    }
+    
+    const circle = new Circle();
+    circle.paint();
+    
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Function Default parameter</title>
+</head>
+<body>
+
+<script>
+    // bisa membuat default value pada parameter
+    function register(name, gender = "UNKNOWN") {
+    console.log(name);
+    console.log(gender);
+    }
+    
+    register("Kevin", "Male"); // Seharusnya
+    register("Kevin"); // akan default dengan UNKNOWN
+    register("Kevin", undefined); // tetap akan mengeluarkan UNKOWN karena undefined
+    register("Kevin", null) // akan terbaca null karena valuenya sudah ada
+    
+    // coba di test lihat di console
+    
+    
+    
+</script>
+
+</body>
+</html>

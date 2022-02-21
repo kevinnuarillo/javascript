@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Attr</title>
+</head>
+<body>
+    <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Nintendo_switch_logo.png">
+<script>
+    const logo = document.getElementById("logo");
+    const src = logo.getAttributeNode("src");
+    
+    console.log(src.name);
+    console.log(src.value);
+    
+    
+</script>
+</body>
+</html>

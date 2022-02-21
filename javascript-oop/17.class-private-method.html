@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>class private method</title>
+</head>
+<body>
+<script>
+    class Person {
+        say(name){
+            if(name){
+                this.#sayWithName(name);
+            } else {
+                this.#sayWithoutName();
+            }
+        }
+        
+        // private method, hanya bisa di akses didalam class
+        #sayWithoutName(){
+            console.log("Hello");
+        }
+        
+        #sayWithName(name){
+            console.log(`Hello ${name}`);
+        }
+        
+    }
+    
+    const kevin = new Person();
+    kevin.say("Ryujin");
+    
+    // coba pake #sayWithoutName
+    // kevin.#sayWithoutName(); // akan error, karena ini private hanya untuk di dalam class
+    
+    
+    
+    
+</script>
+</body>
+</html>

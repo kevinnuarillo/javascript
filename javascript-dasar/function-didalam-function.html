@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>function dalam function</title>
+</head>
+<body>
+
+<script>
+    
+    function outer() {
+        
+        function inner() {
+            console.log("ini inner")
+        }
+        console.log("ini outer")
+        inner(); // function yang di dalam harus dimasukan didalam outer dan diluar inner
+    }
+    
+    outer() // outer harus diluar outer function
+    
+    
+</script>
+
+
+</body>
+</html>
