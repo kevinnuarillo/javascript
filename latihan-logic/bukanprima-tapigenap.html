@@ -9,28 +9,62 @@
 
 <body>
 <script>
+
+// unsolve
+
+{
+  class PrimeNum {
+    result = [];
     
-    function bilanganPrima(num) {
-        let result = [];
-        
-        for(let i = 2; i < num; i++) {
-            let flag = 0;
-            
-            for(let j = 2; j < i; j++) {
-                if(i % j === 0) {
-                    flag = 1
-                    break;
-                }
-            }
-            
-            if(i < 1 && flag === 0) {
-                result.push(i);
-            }
-        }
-        return result;
+    constructor(n) {
+      this.n = n;
     }
     
-    console.log(bilanganPrima(10));
+    prima() {
+      for(let i = 2; i < this.n; i++) {
+        let flag = 0;
+        
+        for(let j = 2; j < i; j++) {
+          if(i % j === 0) {
+            flag = 1;
+            break
+          }
+        }
+        
+        if (i > 1 && flag === 0) {
+          this.result.push(i)
+        }
+      }
+      return this.result;
+    }
+  }
+   
+   const data = new PrimeNum(50);
+   console.log(data.prima());
+   
+}
+
+  function bilanganPrima(bilangan) {
+    let check = 0;
+    for(let i = 1; i <= bilangan; i++) {
+      if(bilangan % i === 0) {
+        check++;
+      }
+    }
+    if(check == 2) {
+      console.info(`Bilangan ${check} adalah prima`)
+    } else {
+      console.info(`Bilangan ${check} bukan prima`)
+    }
+  }
+  console.info(bilanganPrima(6))
+{
+  
+  
+  
+  
+  
+}
     
 </script>
 </body>
