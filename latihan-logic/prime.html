@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+<script>
+    
+  const isPrime = number => {
+    for(let i = 2; i <= number; i++) {
+      if(i % 2 === 0 && i !==2) {
+        continue;
+      } else if(i % 3 === 0 && i !== 3) {
+        continue;
+      } else if(i % 5 === 0 && i !== 5) {
+        continue;
+      } else if(i % 7 === 0 && i !== 7) {
+        continue;
+      } else {
+        console.info(i);
+      }
+    }
+  }
+  
+  isPrime(20);
+  
+</script>
+</body>
+</html>
